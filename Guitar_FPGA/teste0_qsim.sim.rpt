@@ -1,0 +1,355 @@
+Simulator report for teste0_qsim
+Mon Nov 28 02:22:50 2016
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 157 nodes    ;
+; Simulation Coverage         ;      59.03 % ;
+; Total Number of Transitions ; 645          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                               ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                             ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                          ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                                ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                                 ;               ;
+; Vector input source                                                                        ; /home/daniel/Dropbox/workspace_hdl/meu_primeiro_projeto_com_DE0/teste_serialOut.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                                  ; On            ;
+; Check outputs                                                                              ; Off                                                                                 ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                                  ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                                  ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                                  ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                                  ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                                 ; Off           ;
+; Detect glitches                                                                            ; Off                                                                                 ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                                 ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                                 ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                                 ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                                 ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                  ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                          ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                                 ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                                ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                                                                           ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                                                                           ; Transport     ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      59.03 % ;
+; Total nodes checked                                 ; 157          ;
+; Total output ports checked                          ; 144          ;
+; Total output ports with complete 1/0-value coverage ; 85           ;
+; Total output ports with no 1/0-value coverage       ; 35           ;
+; Total output ports with no 1-value coverage         ; 39           ;
+; Total output ports with no 0-value coverage         ; 55           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                            ;
++------------------------------------------+------------------------------------------+------------------+
+; Node Name                                ; Output Port Name                         ; Output Port Type ;
++------------------------------------------+------------------------------------------+------------------+
+; |teste0|CLOCK_50                         ; |teste0|CLOCK_50                         ; out              ;
+; |teste0|LED[6]                           ; |teste0|LED[6]                           ; pin_out          ;
+; |teste0|serialIn:s1|data~3               ; |teste0|serialIn:s1|data~3               ; out              ;
+; |teste0|serialIn:s1|data~4               ; |teste0|serialIn:s1|data~4               ; out              ;
+; |teste0|serialIn:s1|data~7               ; |teste0|serialIn:s1|data~7               ; out              ;
+; |teste0|serialIn:s1|dataIn~1             ; |teste0|serialIn:s1|dataIn~1             ; out              ;
+; |teste0|serialIn:s1|dataIn~2             ; |teste0|serialIn:s1|dataIn~2             ; out              ;
+; |teste0|serialIn:s1|dataIn~3             ; |teste0|serialIn:s1|dataIn~3             ; out              ;
+; |teste0|serialIn:s1|dataIn~4             ; |teste0|serialIn:s1|dataIn~4             ; out              ;
+; |teste0|serialIn:s1|dataIn~5             ; |teste0|serialIn:s1|dataIn~5             ; out              ;
+; |teste0|serialIn:s1|dataIn~6             ; |teste0|serialIn:s1|dataIn~6             ; out              ;
+; |teste0|serialIn:s1|dataIn~7             ; |teste0|serialIn:s1|dataIn~7             ; out              ;
+; |teste0|serialIn:s1|dataIn~8             ; |teste0|serialIn:s1|dataIn~8             ; out              ;
+; |teste0|serialIn:s1|dataCount[2]         ; |teste0|serialIn:s1|dataCount[2]         ; regout           ;
+; |teste0|serialIn:s1|dataCount[1]         ; |teste0|serialIn:s1|dataCount[1]         ; regout           ;
+; |teste0|serialIn:s1|dataIn[4]            ; |teste0|serialIn:s1|dataIn[4]            ; regout           ;
+; |teste0|serialIn:s1|dataIn[3]            ; |teste0|serialIn:s1|dataIn[3]            ; regout           ;
+; |teste0|serialIn:s1|dataIn[2]            ; |teste0|serialIn:s1|dataIn[2]            ; regout           ;
+; |teste0|serialIn:s1|dataIn[1]            ; |teste0|serialIn:s1|dataIn[1]            ; regout           ;
+; |teste0|serialIn:s1|dataIn[0]            ; |teste0|serialIn:s1|dataIn[0]            ; regout           ;
+; |teste0|serialOut:s0|dataOut[0]          ; |teste0|serialOut:s0|dataOut[0]          ; regout           ;
+; |teste0|serialOut:s0|dataOut~0           ; |teste0|serialOut:s0|dataOut~0           ; out              ;
+; |teste0|serialOut:s0|dataOut~1           ; |teste0|serialOut:s0|dataOut~1           ; out              ;
+; |teste0|serialOut:s0|dataOut~2           ; |teste0|serialOut:s0|dataOut~2           ; out              ;
+; |teste0|serialOut:s0|dataOut~3           ; |teste0|serialOut:s0|dataOut~3           ; out              ;
+; |teste0|serialOut:s0|dataOut~4           ; |teste0|serialOut:s0|dataOut~4           ; out              ;
+; |teste0|serialOut:s0|dataOut~5           ; |teste0|serialOut:s0|dataOut~5           ; out              ;
+; |teste0|serialOut:s0|dataOut~6           ; |teste0|serialOut:s0|dataOut~6           ; out              ;
+; |teste0|serialOut:s0|dataOut~7           ; |teste0|serialOut:s0|dataOut~7           ; out              ;
+; |teste0|serialOut:s0|dataOut~8           ; |teste0|serialOut:s0|dataOut~8           ; out              ;
+; |teste0|serialOut:s0|dataOut~9           ; |teste0|serialOut:s0|dataOut~9           ; out              ;
+; |teste0|serialOut:s0|dataOut~10          ; |teste0|serialOut:s0|dataOut~10          ; out              ;
+; |teste0|serialOut:s0|dataOut~11          ; |teste0|serialOut:s0|dataOut~11          ; out              ;
+; |teste0|serialOut:s0|dataOut~12          ; |teste0|serialOut:s0|dataOut~12          ; out              ;
+; |teste0|serialOut:s0|dataOut~13          ; |teste0|serialOut:s0|dataOut~13          ; out              ;
+; |teste0|serialOut:s0|dataOut~14          ; |teste0|serialOut:s0|dataOut~14          ; out              ;
+; |teste0|serialOut:s0|dataOut~15          ; |teste0|serialOut:s0|dataOut~15          ; out              ;
+; |teste0|serialOut:s0|dataOut~16          ; |teste0|serialOut:s0|dataOut~16          ; out              ;
+; |teste0|serialOut:s0|state~0             ; |teste0|serialOut:s0|state~0             ; out              ;
+; |teste0|serialOut:s0|state~1             ; |teste0|serialOut:s0|state~1             ; out              ;
+; |teste0|serialOut:s0|state~3             ; |teste0|serialOut:s0|state~3             ; out              ;
+; |teste0|serialOut:s0|state~4             ; |teste0|serialOut:s0|state~4             ; out              ;
+; |teste0|serialOut:s0|state~5             ; |teste0|serialOut:s0|state~5             ; out              ;
+; |teste0|serialOut:s0|state~9             ; |teste0|serialOut:s0|state~9             ; out              ;
+; |teste0|serialOut:s0|state~10            ; |teste0|serialOut:s0|state~10            ; out              ;
+; |teste0|serialOut:s0|dataCount~0         ; |teste0|serialOut:s0|dataCount~0         ; out              ;
+; |teste0|serialOut:s0|dataCount~1         ; |teste0|serialOut:s0|dataCount~1         ; out              ;
+; |teste0|serialOut:s0|dataCount~2         ; |teste0|serialOut:s0|dataCount~2         ; out              ;
+; |teste0|serialOut:s0|dataCount~3         ; |teste0|serialOut:s0|dataCount~3         ; out              ;
+; |teste0|serialOut:s0|dataCount~4         ; |teste0|serialOut:s0|dataCount~4         ; out              ;
+; |teste0|serialOut:s0|dataCount~5         ; |teste0|serialOut:s0|dataCount~5         ; out              ;
+; |teste0|serialOut:s0|dataCount~6         ; |teste0|serialOut:s0|dataCount~6         ; out              ;
+; |teste0|serialOut:s0|dataCount~7         ; |teste0|serialOut:s0|dataCount~7         ; out              ;
+; |teste0|serialOut:s0|dataCount[3]        ; |teste0|serialOut:s0|dataCount[3]        ; regout           ;
+; |teste0|serialOut:s0|dataCount[2]        ; |teste0|serialOut:s0|dataCount[2]        ; regout           ;
+; |teste0|serialOut:s0|dataCount[1]        ; |teste0|serialOut:s0|dataCount[1]        ; regout           ;
+; |teste0|serialOut:s0|dataCount[0]        ; |teste0|serialOut:s0|dataCount[0]        ; regout           ;
+; |teste0|serialOut:s0|dataOut[8]          ; |teste0|serialOut:s0|dataOut[8]          ; regout           ;
+; |teste0|serialOut:s0|dataOut[7]          ; |teste0|serialOut:s0|dataOut[7]          ; regout           ;
+; |teste0|serialOut:s0|dataOut[6]          ; |teste0|serialOut:s0|dataOut[6]          ; regout           ;
+; |teste0|serialOut:s0|dataOut[5]          ; |teste0|serialOut:s0|dataOut[5]          ; regout           ;
+; |teste0|serialOut:s0|dataOut[4]          ; |teste0|serialOut:s0|dataOut[4]          ; regout           ;
+; |teste0|serialOut:s0|dataOut[3]          ; |teste0|serialOut:s0|dataOut[3]          ; regout           ;
+; |teste0|serialOut:s0|dataOut[2]          ; |teste0|serialOut:s0|dataOut[2]          ; regout           ;
+; |teste0|serialOut:s0|dataOut[1]          ; |teste0|serialOut:s0|dataOut[1]          ; regout           ;
+; |teste0|serialOut:s0|state~12            ; |teste0|serialOut:s0|state~12            ; out0             ;
+; |teste0|serialOut:s0|state.waitingData~0 ; |teste0|serialOut:s0|state.waitingData~0 ; out0             ;
+; |teste0|serialOut:s0|state.sendingData~0 ; |teste0|serialOut:s0|state.sendingData~0 ; out0             ;
+; |teste0|serialOut:s0|state~17            ; |teste0|serialOut:s0|state~17            ; out0             ;
+; |teste0|serialIn:s1|LessThan0~0          ; |teste0|serialIn:s1|LessThan0~0          ; out0             ;
+; |teste0|serialIn:s1|LessThan0~1          ; |teste0|serialIn:s1|LessThan0~1          ; out0             ;
+; |teste0|serialIn:s1|LessThan0~2          ; |teste0|serialIn:s1|LessThan0~2          ; out0             ;
+; |teste0|serialIn:s1|LessThan0~3          ; |teste0|serialIn:s1|LessThan0~3          ; out0             ;
+; |teste0|serialIn:s1|LessThan0~4          ; |teste0|serialIn:s1|LessThan0~4          ; out0             ;
+; |teste0|serialOut:s0|LessThan1~4         ; |teste0|serialOut:s0|LessThan1~4         ; out0             ;
+; |teste0|serialIn:s1|Add0~0               ; |teste0|serialIn:s1|Add0~0               ; out0             ;
+; |teste0|serialIn:s1|Add0~1               ; |teste0|serialIn:s1|Add0~1               ; out0             ;
+; |teste0|serialIn:s1|Add0~2               ; |teste0|serialIn:s1|Add0~2               ; out0             ;
+; |teste0|serialIn:s1|Add0~3               ; |teste0|serialIn:s1|Add0~3               ; out0             ;
+; |teste0|serialIn:s1|Add0~4               ; |teste0|serialIn:s1|Add0~4               ; out0             ;
+; |teste0|serialOut:s0|Add0~0              ; |teste0|serialOut:s0|Add0~0              ; out0             ;
+; |teste0|serialOut:s0|Add0~1              ; |teste0|serialOut:s0|Add0~1              ; out0             ;
+; |teste0|serialOut:s0|Add0~2              ; |teste0|serialOut:s0|Add0~2              ; out0             ;
+; |teste0|serialOut:s0|Add0~3              ; |teste0|serialOut:s0|Add0~3              ; out0             ;
+; |teste0|serialOut:s0|Add0~4              ; |teste0|serialOut:s0|Add0~4              ; out0             ;
++------------------------------------------+------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                           ;
++----------------------------------------+----------------------------------------+------------------+
+; Node Name                              ; Output Port Name                       ; Output Port Type ;
++----------------------------------------+----------------------------------------+------------------+
+; |teste0|LED[0]                         ; |teste0|LED[0]                         ; pin_out          ;
+; |teste0|LED[1]                         ; |teste0|LED[1]                         ; pin_out          ;
+; |teste0|LED[2]                         ; |teste0|LED[2]                         ; pin_out          ;
+; |teste0|LED[3]                         ; |teste0|LED[3]                         ; pin_out          ;
+; |teste0|LED[4]                         ; |teste0|LED[4]                         ; pin_out          ;
+; |teste0|LED[7]                         ; |teste0|LED[7]                         ; pin_out          ;
+; |teste0|dig7seg[0]                     ; |teste0|dig7seg[0]                     ; pin_out          ;
+; |teste0|dig7seg[1]                     ; |teste0|dig7seg[1]                     ; pin_out          ;
+; |teste0|d7seg[2]                       ; |teste0|d7seg[2]                       ; pin_out          ;
+; |teste0|d7seg[3]                       ; |teste0|d7seg[3]                       ; pin_out          ;
+; |teste0|d7seg[6]                       ; |teste0|d7seg[6]                       ; pin_out          ;
+; |teste0|d7seg[7]                       ; |teste0|d7seg[7]                       ; pin_out          ;
+; |teste0|d7seg[8]                       ; |teste0|d7seg[8]                       ; pin_out          ;
+; |teste0|serialIn:s1|data~0             ; |teste0|serialIn:s1|data~0             ; out              ;
+; |teste0|serialIn:s1|data~1             ; |teste0|serialIn:s1|data~1             ; out              ;
+; |teste0|serialIn:s1|data~5             ; |teste0|serialIn:s1|data~5             ; out              ;
+; |teste0|serialIn:s1|dataIn~0           ; |teste0|serialIn:s1|dataIn~0           ; out              ;
+; |teste0|serialIn:s1|data[7]            ; |teste0|serialIn:s1|data[7]            ; regout           ;
+; |teste0|serialIn:s1|data[6]            ; |teste0|serialIn:s1|data[6]            ; regout           ;
+; |teste0|serialIn:s1|data[3]            ; |teste0|serialIn:s1|data[3]            ; regout           ;
+; |teste0|serialIn:s1|data[2]            ; |teste0|serialIn:s1|data[2]            ; regout           ;
+; |teste0|serialIn:s1|dataIn[8]          ; |teste0|serialIn:s1|dataIn[8]          ; regout           ;
+; |teste0|serialIn:s1|dataIn[7]          ; |teste0|serialIn:s1|dataIn[7]          ; regout           ;
+; |teste0|serialOut:s0|dataOut~17        ; |teste0|serialOut:s0|dataOut~17        ; out              ;
+; |teste0|serialOut:s0|state~2           ; |teste0|serialOut:s0|state~2           ; out              ;
+; |teste0|serialOut:s0|state~6           ; |teste0|serialOut:s0|state~6           ; out              ;
+; |teste0|serialOut:s0|state~8           ; |teste0|serialOut:s0|state~8           ; out              ;
+; |teste0|serialOut:s0|state~11          ; |teste0|serialOut:s0|state~11          ; out              ;
+; |teste0|serialOut:s0|cts~0             ; |teste0|serialOut:s0|cts~0             ; out              ;
+; |teste0|serialOut:s0|cts~1             ; |teste0|serialOut:s0|cts~1             ; out              ;
+; |teste0|serialOut:s0|cts~2             ; |teste0|serialOut:s0|cts~2             ; out              ;
+; |teste0|serialOut:s0|state.waitingData ; |teste0|serialOut:s0|state.waitingData ; regout           ;
+; |teste0|serialOut:s0|state.sentData    ; |teste0|serialOut:s0|state.sentData    ; regout           ;
+; |teste0|serialOut:s0|cts               ; |teste0|serialOut:s0|cts               ; regout           ;
+; |teste0|serialOut:s0|state~13          ; |teste0|serialOut:s0|state~13          ; out0             ;
+; |teste0|serialOut:s0|p0~2              ; |teste0|serialOut:s0|p0~2              ; out0             ;
+; |teste0|serialOut:s0|state.sentData~0  ; |teste0|serialOut:s0|state.sentData~0  ; out0             ;
+; |teste0|serialOut:s0|LessThan1~1       ; |teste0|serialOut:s0|LessThan1~1       ; out0             ;
+; |teste0|serialOut:s0|LessThan1~3       ; |teste0|serialOut:s0|LessThan1~3       ; out0             ;
++----------------------------------------+----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                           ;
++----------------------------------------+----------------------------------------+------------------+
+; Node Name                              ; Output Port Name                       ; Output Port Type ;
++----------------------------------------+----------------------------------------+------------------+
+; |teste0|LED[0]                         ; |teste0|LED[0]                         ; pin_out          ;
+; |teste0|LED[1]                         ; |teste0|LED[1]                         ; pin_out          ;
+; |teste0|LED[2]                         ; |teste0|LED[2]                         ; pin_out          ;
+; |teste0|LED[3]                         ; |teste0|LED[3]                         ; pin_out          ;
+; |teste0|LED[4]                         ; |teste0|LED[4]                         ; pin_out          ;
+; |teste0|LED[5]                         ; |teste0|LED[5]                         ; pin_out          ;
+; |teste0|LED[7]                         ; |teste0|LED[7]                         ; pin_out          ;
+; |teste0|dig7seg[0]                     ; |teste0|dig7seg[0]                     ; pin_out          ;
+; |teste0|dig7seg[1]                     ; |teste0|dig7seg[1]                     ; pin_out          ;
+; |teste0|d7seg[0]                       ; |teste0|d7seg[0]                       ; pin_out          ;
+; |teste0|d7seg[1]                       ; |teste0|d7seg[1]                       ; pin_out          ;
+; |teste0|d7seg[2]                       ; |teste0|d7seg[2]                       ; pin_out          ;
+; |teste0|d7seg[3]                       ; |teste0|d7seg[3]                       ; pin_out          ;
+; |teste0|d7seg[4]                       ; |teste0|d7seg[4]                       ; pin_out          ;
+; |teste0|d7seg[5]                       ; |teste0|d7seg[5]                       ; pin_out          ;
+; |teste0|d7seg[6]                       ; |teste0|d7seg[6]                       ; pin_out          ;
+; |teste0|d7seg[7]                       ; |teste0|d7seg[7]                       ; pin_out          ;
+; |teste0|d7seg[8]                       ; |teste0|d7seg[8]                       ; pin_out          ;
+; |teste0|serialIn:s1|data~0             ; |teste0|serialIn:s1|data~0             ; out              ;
+; |teste0|serialIn:s1|data~1             ; |teste0|serialIn:s1|data~1             ; out              ;
+; |teste0|serialIn:s1|data~2             ; |teste0|serialIn:s1|data~2             ; out              ;
+; |teste0|serialIn:s1|data~5             ; |teste0|serialIn:s1|data~5             ; out              ;
+; |teste0|serialIn:s1|data~6             ; |teste0|serialIn:s1|data~6             ; out              ;
+; |teste0|serialIn:s1|dataIn~0           ; |teste0|serialIn:s1|dataIn~0           ; out              ;
+; |teste0|serialIn:s1|dataCount[3]       ; |teste0|serialIn:s1|dataCount[3]       ; regout           ;
+; |teste0|serialIn:s1|dr                 ; |teste0|serialIn:s1|dr                 ; regout           ;
+; |teste0|serialIn:s1|data[7]            ; |teste0|serialIn:s1|data[7]            ; regout           ;
+; |teste0|serialIn:s1|data[6]            ; |teste0|serialIn:s1|data[6]            ; regout           ;
+; |teste0|serialIn:s1|data[5]            ; |teste0|serialIn:s1|data[5]            ; regout           ;
+; |teste0|serialIn:s1|data[4]            ; |teste0|serialIn:s1|data[4]            ; regout           ;
+; |teste0|serialIn:s1|data[3]            ; |teste0|serialIn:s1|data[3]            ; regout           ;
+; |teste0|serialIn:s1|data[2]            ; |teste0|serialIn:s1|data[2]            ; regout           ;
+; |teste0|serialIn:s1|data[1]            ; |teste0|serialIn:s1|data[1]            ; regout           ;
+; |teste0|serialIn:s1|data[0]            ; |teste0|serialIn:s1|data[0]            ; regout           ;
+; |teste0|serialIn:s1|dataIn[8]          ; |teste0|serialIn:s1|dataIn[8]          ; regout           ;
+; |teste0|serialIn:s1|dataIn[7]          ; |teste0|serialIn:s1|dataIn[7]          ; regout           ;
+; |teste0|serialIn:s1|dataIn[6]          ; |teste0|serialIn:s1|dataIn[6]          ; regout           ;
+; |teste0|serialIn:s1|dataIn[5]          ; |teste0|serialIn:s1|dataIn[5]          ; regout           ;
+; |teste0|serialOut:s0|state~2           ; |teste0|serialOut:s0|state~2           ; out              ;
+; |teste0|serialOut:s0|state~7           ; |teste0|serialOut:s0|state~7           ; out              ;
+; |teste0|serialOut:s0|state~8           ; |teste0|serialOut:s0|state~8           ; out              ;
+; |teste0|serialOut:s0|state~11          ; |teste0|serialOut:s0|state~11          ; out              ;
+; |teste0|serialOut:s0|cts~0             ; |teste0|serialOut:s0|cts~0             ; out              ;
+; |teste0|serialOut:s0|cts~1             ; |teste0|serialOut:s0|cts~1             ; out              ;
+; |teste0|serialOut:s0|cts~2             ; |teste0|serialOut:s0|cts~2             ; out              ;
+; |teste0|serialOut:s0|state.sendingData ; |teste0|serialOut:s0|state.sendingData ; regout           ;
+; |teste0|serialOut:s0|state.sentData    ; |teste0|serialOut:s0|state.sentData    ; regout           ;
+; |teste0|serialOut:s0|cts               ; |teste0|serialOut:s0|cts               ; regout           ;
+; |teste0|serialOut:s0|state~13          ; |teste0|serialOut:s0|state~13          ; out0             ;
+; |teste0|serialOut:s0|LessThan1~0       ; |teste0|serialOut:s0|LessThan1~0       ; out0             ;
+; |teste0|serialOut:s0|state.sentData~0  ; |teste0|serialOut:s0|state.sentData~0  ; out0             ;
+; |teste0|serialOut:s0|LessThan1~1       ; |teste0|serialOut:s0|LessThan1~1       ; out0             ;
+; |teste0|serialOut:s0|LessThan1~2       ; |teste0|serialOut:s0|LessThan1~2       ; out0             ;
+; |teste0|serialOut:s0|LessThan1~3       ; |teste0|serialOut:s0|LessThan1~3       ; out0             ;
+; |teste0|serialOut:s0|LessThan1~5       ; |teste0|serialOut:s0|LessThan1~5       ; out0             ;
++----------------------------------------+----------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Mon Nov 28 02:22:49 2016
+Info: Command: quartus_sim --simulation_results_format=VWF teste0 -c teste0_qsim
+Info (324025): Using vector source file "/home/daniel/Dropbox/workspace_hdl/meu_primeiro_projeto_com_DE0/teste_serialOut.vwf"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|KEY[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|KEY[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|ehkey[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|ehkey[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|ehkey[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|ehkey[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|ehkey[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|ehkey[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|ehkey[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|ehkey[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|ehkey[8]"
+Warning (328012): Can't find signal in vector source file for input pin "|teste0|ehkey[9]"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      59.03 %
+Info (328052): Number of transitions in simulation is 645
+Info (324045): Vector file teste0_qsim.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 645 megabytes
+    Info: Processing ended: Mon Nov 28 02:22:50 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

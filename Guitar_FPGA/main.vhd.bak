@@ -1,0 +1,147 @@
+
+--BIBLIOTECAS USADAS PARA REALIZAÇÃO DO PROGRAMA
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity main is
+	port
+	(
+	   -- ENTRADAS FISICAS!
+		-- Obs:Não existe necessidade de modificar nada aqui!!!
+		
+		--DE0Nano
+		-- Input ports 
+		CLOCK_50 : in std_logic; -- Oscilador
+		KEY : in std_logic_vector( 1 downto 0); --Botões que ficam na placa DE0-nano
+		
+		--output ports
+		LED : out std_logic_vector(7 downto 0); --LEDS que ficam na placa DEO-nano
+
+		--Expansion Header UFPE/DES kit
+		-- input ports
+		ehkey : in std_logic_vector(9 downto 0);-- bits 0-7=>chaves; bits 8 e 9 => pushbutton
+		
+		-- output ports
+		dig7seg : out std_logic_vector(1 downto 0); -- Seletor do display
+		d7seg : out std_logic_vector(8 downto 0) -- Indicator de 7seg selecionado por dig7seg
+		
+	);
+end main;
+
+
+architecture behaviorOfTest of main is
+	signal ffcoluna0, ffcoluna1: std_logic_vector(8 downto 0);
+	signal tick, tick_tratado: std_logic;
+	signal score: unsigned(7 downto 0);
+	signal reset: std_logic;
+begin
+	
+	conta_1segundo: entity work.conta_tick
+	port map(clk => clocK_50, pulso => tick);
+	
+	tick_tratado <= tick;-- and running;
+
+	FLIP_FLOP00: entity work.Flip_Flop_D
+	port map(D => ehkey(1), Clk => tick_tratado, Q => ffcoluna0(0)); -- MUDAR GERAÇÂO DO SINAL
+	FLIP_FLOP01: entity work.Flip_Flop_D
+	port map(D => ffcoluna0(0), Clk => tick_tratado, Q => ffcoluna0(1));
+	FLIP_FLOP02: entity work.Flip_Flop_D
+	port map(D => ffcoluna0(1), Clk => tick_tratado, Q => ffcoluna0(2));
+	FLIP_FLOP03: entity work.Flip_Flop_D
+	port map(D => ffcoluna0(2), Clk => tick_tratado, Q => ffcoluna0(3));
+	FLIP_FLOP04: entity work.Flip_Flop_D
+	port map(D => ffcoluna0(3), Clk => tick_tratado, Q => ffcoluna0(4));
+	FLIP_FLOP05: entity work.Flip_Flop_D
+	port map(D => ffcoluna0(4), Clk => tick_tratado, Q => ffcoluna0(5));
+	FLIP_FLOP06: entity work.Flip_Flop_D
+	port map(D => ffcoluna0(5), Clk => tick_tratado, Q => ffcoluna0(6));
+	FLIP_FLOP07: entity work.Flip_Flop_D
+	port map(D => ffcoluna0(6), Clk => tick_tratado, Q => ffcoluna0(7));
+	FLIP_FLOP08: entity work.Flip_Flop_D
+	port map(D => ffcoluna0(7), Clk => tick_tratado, Q => ffcoluna0(8));
+
+	FLIP_FLOP10: entity work.Flip_Flop_D
+	port map(D => ehkey(2), Clk => tick_tratado, Q => ffcoluna1(0)); -- MUDAR GERAÇÂO DO SINAL
+	FLIP_FLOP11: entity work.Flip_Flop_D
+	port map(D => ffcoluna1(0), Clk => tick_tratado, Q => ffcoluna1(1));
+	FLIP_FLOP12: entity work.Flip_Flop_D
+	port map(D => ffcoluna1(1), Clk => tick_tratado, Q => ffcoluna1(2));
+	FLIP_FLOP13: entity work.Flip_Flop_D
+	port map(D => ffcoluna1(2), Clk => tick_tratado, Q => ffcoluna1(3));
+	FLIP_FLOP14: entity work.Flip_Flop_D
+	port map(D => ffcoluna1(3), Clk => tick_tratado, Q => ffcoluna1(4));
+	FLIP_FLOP15: entity work.Flip_Flop_D
+	port map(D => ffcoluna1(4), Clk => tick_tratado, Q => ffcoluna1(5));
+	FLIP_FLOP16: entity work.Flip_Flop_D
+	port map(D => ffcoluna1(5), Clk => tick_tratado, Q => ffcoluna1(6));
+	FLIP_FLOP17: entity work.Flip_Flop_D
+	port map(D => ffcoluna1(6), Clk => tick_tratado, Q => ffcoluna1(7));
+	FLIP_FLOP18: entity work.Flip_Flop_D
+	port map(D => ffcoluna1(7), Clk => tick_tratado, Q => ffcoluna1(8));
+	
+	d7seg(8) <= tick_tratado;
+
+	--Mostrar no display as "notas"
+	process (ffcoluna0, ffcoluna1, tick_tratado, ehkey)
+		
+		variable nota0, nota1:std_logic:='0';
+		variable running: boolean:=true;
+	begin
+		
+		if (rising_edge(tick_tratado) and running) then
+			if(nota0=ffcoluna0(8) and nota1=ffcoluna1(8)) then
+				dig7seg <= "00";
+				d7seg(5) <= ffcoluna0(0);
+				d7seg(4) <= ffcoluna1(0);
+				d7seg(1) <= ffcoluna0(1);
+				d7seg(2) <= ffcoluna1(1);
+
+				dig7seg <= "01";
+				d7seg(5) <= ffcoluna0(2);
+				d7seg(4) <= ffcoluna1(2);
+				d7seg(1) <= ffcoluna0(3);
+				d7seg(2) <= ffcoluna1(3);
+
+				dig7seg <= "10";
+				d7seg(5) <= ffcoluna0(4);
+				d7seg(4) <= ffcoluna1(4);
+				d7seg(1) <= ffcoluna0(5);
+				d7seg(2) <= ffcoluna1(5);
+
+				dig7seg <= "11";
+				d7seg(5) <= ffcoluna0(6);
+				d7seg(4) <= ffcoluna1(6);
+				d7seg(1) <= ffcoluna0(7);
+				d7seg(2) <= ffcoluna1(7);
+				nota0:= '0';
+				nota1:= '0';
+			else
+				running:=false;
+				--ffcoluna0:="000000000";
+				--ffcoluna1:="000000000";
+			end if;
+		end if;
+		
+		if(ehkey(0) = '1') then
+			running := true;
+			reset<='0';
+			
+		elsif(not running) then
+			reset<='1';
+		end if;
+		if(ehkey(8) = '1') then
+			nota0:= '1';
+		end if;
+			
+		if(ehkey(9) = '1') then
+			nota1:= '1';
+		end if;
+		
+	end process;
+
+	
+	--Mostrar score
+		contador: entity work.contador
+		port map(clock => tick, result => led(7 downto 0), count => score, reset => reset);
+end behaviorOfTest;

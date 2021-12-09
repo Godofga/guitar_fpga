@@ -1,0 +1,24 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity bin2d7seg is
+    Port ( bin : in  STD_LOGIC_VECTOR (4 downto 0);     -- input bin
+           d7seg   : out STD_LOGIC(6 downto 0);         -- output 7seg ABCDEFG
+end bin2d7seg;
+
+architecture Behavioral of bin2d7seg is
+begin
+with bin select
+    d7seg <= "1111110" when "00000", -- 0
+             "0110000" when "00001", -- 1
+             "1101101" when "00010", -- 2
+             "1111001" when "00011", -- 3
+             "0110011" when "00100", -- 4
+             "1011011" when "00101", -- 5
+             "1011111" when "00110", -- 6 
+             "1110000" when "00111", -- 7
+             "1111111" when "01000", -- 8
+             "1111011" when "01001", -- 9
+             "0000000"  when others;
+
+end Behavioral;

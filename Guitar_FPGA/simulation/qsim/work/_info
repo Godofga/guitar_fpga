@@ -1,0 +1,301 @@
+m255
+K3
+z0
+!s11e MIXED_VERSIONS
+13
+cModel Technology
+Z0 dC:\Users\Arnhold\Desktop\sistemas digitais\meu_primeiro_projeto_com_DE0\simulation\qsim
+Ehard_block
+Z1 w1638501144
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 76OUjOFMM1Jzd<9936DA;3
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 dANj__M<MaN@;H9Tkm=iP1
+!i122 73
+Z8 dC:/Users/Acer/Documents/Programming/VHDL/lab_sistemas/aula10/Guitar_FPGAa/Guitar_FPGA/simulation/qsim
+Z9 8teste0.vho
+Z10 Fteste0.vho
+l0
+L35 1
+VB]0;STalBkCB1_B4BXQDW2
+!s100 >mXi5[`cD`bFC`UBKA<om3
+Z11 OV;C;2020.1;71
+32
+Z12 !s110 1638501145
+!i10b 1
+Z13 !s108 1638501145.000000
+Z14 !s90 -work|work|teste0.vho|
+Z15 !s107 teste0.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
+!i122 73
+l65
+L51 20
+Via>5o7W??azG@W@@eFOTF0
+!s100 [5;Wd8QGQ>@2NGoJ1I]Y43
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Emain
+R1
+R3
+R7
+R2
+Z18 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+R4
+R5
+R6
+Z19 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 73
+R8
+R9
+R10
+l0
+Z20 L80 1
+Vl0Vig5U[a@1GFPPhWDzYD1
+!s100 doaV8@fi8WjZF1Z=KeU?^1
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R3
+R7
+R2
+R18
+R4
+R5
+R6
+R19
+DEx4 work 4 main 0 22 l0Vig5U[a@1GFPPhWDzYD1
+!i122 73
+l367
+L148 3221
+V3X2aV<CVTaLK8F]Tg;kX<2
+!s100 jkjc0Bz<D_h[E;H1XRVmR2
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Emain_vhd_vec_tst
+Z21 w1638501142
+R5
+R6
+!i122 74
+R8
+Z22 8Waveform_guitar_fpga.vwf.vht
+Z23 FWaveform_guitar_fpga.vwf.vht
+l0
+Z24 L32 1
+V:k@OU;^>kY7Y;kWH?Q@Pd3
+!s100 @AWfR>kIh`c8]RIO9=MkI2
+R11
+32
+R12
+!i10b 1
+R13
+Z25 !s90 -work|work|Waveform_guitar_fpga.vwf.vht|
+Z26 !s107 Waveform_guitar_fpga.vwf.vht|
+!i113 1
+R16
+R17
+Amain_arch
+R5
+R6
+Z27 DEx4 work 16 main_vhd_vec_tst 0 22 :k@OU;^>kY7Y;kWH?Q@Pd3
+!i122 74
+l59
+Z28 L34 712
+Z29 Vo7eM74_=8`;8@Z8aT@>fl1
+Z30 !s100 1cQjPP=B1nT[8L07ThT=H2
+R11
+32
+R12
+!i10b 1
+R13
+R25
+R26
+!i113 1
+R16
+R17
+Eteste0
+Z31 w1637475690
+R3
+R7
+R2
+R18
+R4
+R5
+R6
+R19
+!i122 32
+Z32 dC:/Users/Acer/Documents/Programming/VHDL/lab_sistemas/aula10/Guitar_FPGA/simulation/qsim
+R9
+R10
+l0
+R20
+VYTV4Je6ZK>Z<kWz]i=egR3
+!s100 OcUFCTh81j:Mhm7YTHX7V0
+R11
+32
+Z33 !s110 1637475691
+!i10b 1
+Z34 !s108 1637475691.000000
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R3
+R7
+R2
+R18
+R4
+R5
+R6
+R19
+DEx4 work 6 teste0 0 22 YTV4Je6ZK>Z<kWz]i=egR3
+!i122 32
+l265
+L126 1755
+VCgYIOAWWa^c<39lTgWL[Q3
+!s100 Z6[Geh;W`KAbDPFgaB?G:3
+R11
+32
+R33
+!i10b 1
+R34
+R14
+R15
+!i113 1
+R16
+R17
+Eteste0_vhd_vec_tst
+Z35 w1637475688
+R5
+R6
+!i122 33
+R32
+Z36 8Waveform5.vwf.vht
+Z37 FWaveform5.vwf.vht
+l0
+R24
+VmB4j6_z0F__5iY9z3HzYG2
+!s100 KdjARg7[;42diU0ddzhfl2
+R11
+32
+Z38 !s110 1637475692
+!i10b 1
+Z39 !s108 1637475692.000000
+Z40 !s90 -work|work|Waveform5.vwf.vht|
+Z41 !s107 Waveform5.vwf.vht|
+!i113 1
+R16
+R17
+Ateste0_arch
+R5
+R6
+DEx4 work 18 teste0_vhd_vec_tst 0 22 mB4j6_z0F__5iY9z3HzYG2
+!i122 33
+l53
+L34 130
+V`GEmWajY:zJLCHOh7ikZA3
+!s100 DQHV5M<;oA>cE1LP6[_1P3
+R11
+32
+R38
+!i10b 1
+R39
+R40
+R41
+!i113 1
+R16
+R17
+vteste0_vlg_check_tst
+!i10b 1
+!s100 5@4zU[aP1;QcUiNO]KNf_0
+IUcc6FfVQ=`1<A8>TVnBzc3
+V@LDhHWo40UOG^7Zl6BTRa3
+R0
+Z42 w1474048691
+Z43 8teste0.vt
+Z44 Fteste0.vt
+L0 61
+Z45 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z46 !s108 1474048693.645000
+Z47 !s107 teste0.vt|
+Z48 !s90 -work|work|teste0.vt|
+!s101 -O0
+Z49 o-work work -O0
+vteste0_vlg_sample_tst
+!i10b 1
+!s100 C>F3P8K9LOKbA5O3295dL2
+IW2Y<nYcRNlS?nXb8zQ8Vb3
+VC:nP<<3`k8d826NSFa2d@2
+R0
+R42
+R43
+R44
+L0 29
+R45
+r1
+!s85 0
+31
+R46
+R47
+R48
+!s101 -O0
+R49
+vteste0_vlg_vec_tst
+!i10b 1
+!s100 dP]EWZ[3_TaM<cOd:2AB10
+IZST9an<]XPNY?ePQk:@X?1
+VjA88TEW^ZQ<5RZaL;YSE`3
+R0
+R42
+R43
+R44
+L0 291
+R45
+r1
+!s85 0
+31
+R46
+R47
+R48
+!s101 -O0
+R49

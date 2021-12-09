@@ -1,0 +1,54 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity teste0 is
+	port
+	(
+		-- Input ports
+		clk : in std_logic;
+		push : in std_logic_vector(1 downto 0);
+		dsw : in std_logic_vector(7 downto 0);
+
+		led : out std_logic_vector(7 downto 0);
+		dig7seg : out std_logic_vector(3 downto 0);
+		d7seg : out std_logic_vector(7 downto 0)
+	);
+end teste0;
+
+
+architecture behaviorOfTest of teste0 is
+signal vtest: std_logic_vector(7 downto 0);
+begin
+
+process(clk) -- Divisor do sinal de clock da placa(50Mhz)
+variable count: integer range 0 to 50000000;
+begin
+	if rising_edge(clk) then
+		count:=count+1;
+		if count=(1*2500000) then
+			count:=0;
+			vtest<=std_logic_vector(unsigned(vtest)+1);
+		end if;
+	end if;
+end process;
+
+led <= vtest;
+d7seg <= vtest;
+dig7seg(0) <= '1';
+led <= dsw;
+
+--vout(0)<= (vtest(0)) and (vtest(1)); --Teste da funcao AND
+--vout<=to_stdlogicvector("1111");
+--vout<=vtest and to_stdlogicvector(KEY(0)&KEY(0)&KEY(0)&KEY(0));
+--vout<=not vtest;
+--vout<=(to_stdlogicvector("11") and (not to_stdlogicvector(KEY(0)&KEY(0))))&(to_stdlogicvector("11") 
+--and to_stdlogicvector(KEY(0)&KEY(0)));
+--vout<=to_stdlogicvector(KEY(1)&KEY(0))&to_stdlogicvector("11");
+--vout<=to_stdulogicvector(KEY(1)&KEY(0))&to_stdulogicvector("--");
+--vout(0)<=vtest(2) and to_stdulogic(KEY(0));
+--vout(1)<=to_stdulogic(KEY(1));
+--LED <= to_bitvector("00"&vout&"00");
+--LED<=to_bitvector(vtest & vout); --Mostra o padrao de teste nos 4bit mais significativos do display de leds
+ 
+end behaviorOfTest;

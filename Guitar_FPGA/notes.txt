@@ -1,0 +1,22 @@
+--decod: work.bin2d7seg port map(x=>vtest(4 downto 0),d7seg=>d7seg(7 downto 1));
+--d7seg(0) <=ehkey(2);
+--d7seg(8) <=ehkey(3);
+--dig7seg <= ehkey(1 downto 0);
+--led <= ehkey(7 downto 0);
+
+
+--d7seg( 7 downto 1) <= ehkey(6 downto 0);
+--d7seg(0) <='1'; -- two point clock
+--d7seg(8) <='1'; -- not DP
+--dig7seg <= ehkey(7)&'0';
+--led <= ehkey(7 downto 0);
+
+--decod: work.bin2d7seg port map(x=>ehkey(4 downto 0),d7seg=>d7seg(7 downto 1));
+--d7seg(0) <='1'; -- two point clock
+--d7seg(8) <='1'; -- not DP
+--dig7seg <= ehkey(7)&'0';
+--led <= ehkey(7 downto 0);
+
+LED(0)<=ehkey(0) and ehkey(1);
+LED(1)<=ehkey(2) or ehkey(3);
+LED(2)<=not ehkey(4);

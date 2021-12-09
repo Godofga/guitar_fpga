@@ -1,0 +1,298 @@
+|main
+CLOCK_50 => conta_tick:GERADOR_CLOCK.clk
+CLOCK_50 => conta_tick:GERADOR_CLOCK2.clk
+KEY[0] => ~NO_FANOUT~
+KEY[1] => ~NO_FANOUT~
+ehkey[0] => derrota.ACLR
+ehkey[0] => vitoria.ACLR
+ehkey[0] => score[0].ACLR
+ehkey[0] => score[1].ACLR
+ehkey[0] => score[2].ACLR
+ehkey[0] => score[3].ACLR
+ehkey[0] => score[4].ACLR
+ehkey[0] => score[5].ACLR
+ehkey[0] => score[6].ACLR
+ehkey[0] => score[7].ACLR
+ehkey[0] => score[8].ACLR
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP00.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP01.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP02.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP03.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP04.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP05.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP06.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP07.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP08.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP10.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP11.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP12.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP13.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP14.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP15.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP16.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP17.reset
+ehkey[0] => flip_flop_d_reset:FLIP_FLOP18.reset
+ehkey[1] => ~NO_FANOUT~
+ehkey[2] => ~NO_FANOUT~
+ehkey[3] => ~NO_FANOUT~
+ehkey[4] => ~NO_FANOUT~
+ehkey[5] => ~NO_FANOUT~
+ehkey[6] => ~NO_FANOUT~
+ehkey[7] => ~NO_FANOUT~
+ehkey[8] => nota0.PRESET
+ehkey[9] => nota1.PRESET
+ff1[0] <= flip_flop_d_reset:FLIP_FLOP00.Q
+ff1[1] <= flip_flop_d_reset:FLIP_FLOP01.Q
+ff1[2] <= flip_flop_d_reset:FLIP_FLOP02.Q
+ff1[3] <= flip_flop_d_reset:FLIP_FLOP03.Q
+ff1[4] <= flip_flop_d_reset:FLIP_FLOP04.Q
+ff1[5] <= flip_flop_d_reset:FLIP_FLOP05.Q
+ff1[6] <= flip_flop_d_reset:FLIP_FLOP06.Q
+ff1[7] <= flip_flop_d_reset:FLIP_FLOP07.Q
+ff1[8] <= flip_flop_d_reset:FLIP_FLOP08.Q
+ff2[0] <= flip_flop_d_reset:FLIP_FLOP10.Q
+ff2[1] <= flip_flop_d_reset:FLIP_FLOP11.Q
+ff2[2] <= flip_flop_d_reset:FLIP_FLOP12.Q
+ff2[3] <= flip_flop_d_reset:FLIP_FLOP13.Q
+ff2[4] <= flip_flop_d_reset:FLIP_FLOP14.Q
+ff2[5] <= flip_flop_d_reset:FLIP_FLOP15.Q
+ff2[6] <= flip_flop_d_reset:FLIP_FLOP16.Q
+ff2[7] <= flip_flop_d_reset:FLIP_FLOP17.Q
+ff2[8] <= flip_flop_d_reset:FLIP_FLOP18.Q
+LED[0] <= score[0].DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= score[1].DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= score[2].DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= score[3].DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= score[4].DB_MAX_OUTPUT_PORT_TYPE
+LED[5] <= score[5].DB_MAX_OUTPUT_PORT_TYPE
+LED[6] <= score[6].DB_MAX_OUTPUT_PORT_TYPE
+LED[7] <= LED[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dig7seg[0] <= dig7seg[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dig7seg[1] <= dig7seg[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d7seg[0] <= d7seg[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d7seg[1] <= d7seg[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d7seg[2] <= d7seg[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d7seg[3] <= d7seg[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d7seg[4] <= d7seg[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d7seg[5] <= d7seg[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d7seg[6] <= d7seg[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d7seg[7] <= d7seg[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d7seg[8] <= d7seg[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|conta_tick:GERADOR_CLOCK
+clk => sinal.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+clk => count[9].CLK
+clk => count[10].CLK
+clk => count[11].CLK
+clk => count[12].CLK
+clk => count[13].CLK
+clk => count[14].CLK
+clk => count[15].CLK
+clk => count[16].CLK
+clk => count[17].CLK
+clk => count[18].CLK
+clk => count[19].CLK
+clk => count[20].CLK
+clk => count[21].CLK
+clk => count[22].CLK
+pulso <= sinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|conta_tick:GERADOR_CLOCK2
+clk => sinal.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+clk => count[9].CLK
+clk => count[10].CLK
+clk => count[11].CLK
+clk => count[12].CLK
+clk => count[13].CLK
+clk => count[14].CLK
+clk => count[15].CLK
+clk => count[16].CLK
+pulso <= sinal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|random:GERADOR_RANDOM1
+clk => rand_temp[0].CLK
+clk => rand_temp[1].CLK
+clk => rand_temp[2].CLK
+clk => rand_temp[3].CLK
+clk => rand_temp[4].CLK
+clk => rand_temp[5].CLK
+clk => rand_temp[6].CLK
+clk => rand_temp[7].CLK
+random_num[0] <= rand_temp[0].DB_MAX_OUTPUT_PORT_TYPE
+random_num[1] <= rand_temp[1].DB_MAX_OUTPUT_PORT_TYPE
+random_num[2] <= rand_temp[2].DB_MAX_OUTPUT_PORT_TYPE
+random_num[3] <= rand_temp[3].DB_MAX_OUTPUT_PORT_TYPE
+random_num[4] <= rand_temp[4].DB_MAX_OUTPUT_PORT_TYPE
+random_num[5] <= rand_temp[5].DB_MAX_OUTPUT_PORT_TYPE
+random_num[6] <= rand_temp[6].DB_MAX_OUTPUT_PORT_TYPE
+random_num[7] <= rand_temp[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|random:GERADOR_RANDOM2
+clk => rand_temp[0].CLK
+clk => rand_temp[1].CLK
+clk => rand_temp[2].CLK
+clk => rand_temp[3].CLK
+clk => rand_temp[4].CLK
+clk => rand_temp[5].CLK
+clk => rand_temp[6].CLK
+clk => rand_temp[7].CLK
+clk => rand_temp[8].CLK
+random_num[0] <= rand_temp[0].DB_MAX_OUTPUT_PORT_TYPE
+random_num[1] <= rand_temp[1].DB_MAX_OUTPUT_PORT_TYPE
+random_num[2] <= rand_temp[2].DB_MAX_OUTPUT_PORT_TYPE
+random_num[3] <= rand_temp[3].DB_MAX_OUTPUT_PORT_TYPE
+random_num[4] <= rand_temp[4].DB_MAX_OUTPUT_PORT_TYPE
+random_num[5] <= rand_temp[5].DB_MAX_OUTPUT_PORT_TYPE
+random_num[6] <= rand_temp[6].DB_MAX_OUTPUT_PORT_TYPE
+random_num[7] <= rand_temp[7].DB_MAX_OUTPUT_PORT_TYPE
+random_num[8] <= rand_temp[8].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP00
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP01
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP02
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP03
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP04
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP05
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP06
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP07
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP08
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP10
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP11
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP12
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP13
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP14
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP15
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP16
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP17
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Flip_Flop_D_Reset:FLIP_FLOP18
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ff1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ff1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ff1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ff1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ff1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ff1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ff1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ff1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ff1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ff2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ff2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ff2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ff2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ff2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ff2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ff2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ff2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ff2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dig7seg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dig7seg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d7seg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d7seg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d7seg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d7seg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ehkey[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "ehkey[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ehkey[8]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Binary_Counter is
+generic(
+N : integer := 4);
+
+Port ( clk_Pulse : in STD_LOGIC;
+reset : in STD_LOGIC;
+max_out : out STD_LOGIC;
+Q : out STD_LOGIC_VECTOR (N-1 downto 0));
+end Binary_Counter;
+
+architecture bh_Binary_Counter of Binary_Counter is
+signal r_conta: unsigned(N-1 downto 0);
+signal r_proxi: unsigned(N-1 downto 0);
+
+begin
+
+mem_contagem: process(clk_Pulse,reset)
+begin
+if (reset='0') then
+r_conta <= (others => '0');
+elsif rising_edge(clk_Pulse) then
+r_conta <= r_proxi;
+end if;
+end process mem_contagem;
+
+r_proxi <= r_conta + 1;
+
+Q <= STD_LOGIC_VECTOR(r_conta);
+max_out <= '1' when r_conta=(2**N-1) else '0';
+end bh_Binary_Counter;
